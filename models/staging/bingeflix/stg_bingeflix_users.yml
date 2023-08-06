@@ -22,12 +22,12 @@ models:
         description: When the user's account was deleted. The value is NULL if the account has not been deleted.
 
       - name: username
-        description: The username for login to Bingeflix.
+        description: '{{ doc("username") }}'
         tests:
           - not_null
 
       - name: name
-        description: The name of the user.
+        description: '{{ doc("name") }}'
         tests:
           - not_null
 
