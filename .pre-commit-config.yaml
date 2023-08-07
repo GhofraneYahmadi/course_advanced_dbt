@@ -5,3 +5,11 @@ repos:
     - id: check-yaml
     - id: end-of-file-fixer
     - id: trailing-whitespace
+
+- repo: https://github.com/dbt-checkpoint/dbt-checkpoint
+  rev: v1.1.1
+  hooks:
+    - id: dbt-compile # Compiles dbt (necessary for future hooks)
+    - id: dbt-docs-generate # Generates the dbt docs (necessary for some future hooks)
+    - id: check-script-semicolon # Ensure that the model does not have a semicolon at the end of the file.
+    - id: check-script-has-no-table-name # Ensures models only use source or ref macro to specify the table name.
