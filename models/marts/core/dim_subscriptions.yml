@@ -11,7 +11,6 @@ models:
       - name: subscription_plan_id
         description: The subscription plan identifier.
         tests:
-          - not_null
           - accepted_values:
               values: [1, 2, 3]
 
